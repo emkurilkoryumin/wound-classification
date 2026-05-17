@@ -1,0 +1,26 @@
+project_name: wound-classification
+seed: 42
+device: auto
+num_workers: 4
+output_dir: outputs
+
+data:
+  root_dir: data/raw
+  image_size: 224
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+
+training:
+  batch_size: 16
+  epochs: 10
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+
+model:
+  backbone: resnet18
+  pretrained: true
+  checkpoint_name: baseline_resnet18.pt
+
+interpretation:
+  target_layer: layer4
