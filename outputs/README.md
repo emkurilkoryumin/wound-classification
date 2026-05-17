@@ -1,10 +1,10 @@
-# Outputs
+# Выходные артефакты
 
-Generated artifacts are written here:
+Сюда сохраняются результаты работы скриптов:
 
-- `checkpoints/` for model weights;
-- `figures/` for learning curves;
-- `gradcam/` for interpretation overlays;
-- `metrics/` for CSV and JSON summaries.
+- `checkpoints/` для весов модели;
+- `figures/` для графиков обучения;
+- `gradcam/` для визуализаций интерпретации;
+- `metrics/` для CSV- и JSON-сводок.
 
-The directories are kept in Git so the repository structure stays reproducible.
+Каталоги сохранены в Git, чтобы структура репозитория оставалась воспроизводимой.

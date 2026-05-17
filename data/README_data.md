@@ -1,8 +1,8 @@
-# Data layout
+# Структура данных
 
-The dataset is expected to be stored locally and is not tracked by Git.
+Набор данных предполагается хранить локально; в Git он не добавляется.
 
-Recommended folder layout:
+Рекомендуемая структура каталогов:
 
 ```text
 data/raw/
@@ -13,4 +13,4 @@ data/raw/
 └── class_3/
 ```
 
-Each subdirectory name is treated as a class label. The training pipeline scans all image files recursively inside each class directory.
+Имя каждого подкаталога трактуется как метка класса. Для варианта, описанного в 5 этапе НИР, ожидаются каталоги `грануляция`, `воспаление` и `некроз`. Обучающий pipeline рекурсивно сканирует все файлы изображений внутри каталогов классов.

@@ -8,7 +8,3 @@ venv/
 
 data/raw/
 outputs/checkpoints/*.pt
-outputs/figures/*.png
-outputs/gradcam/*.png
-outputs/metrics/*.csv
-outputs/metrics/*.json

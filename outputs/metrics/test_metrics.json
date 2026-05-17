@@ -1,0 +1,8 @@
+{
+  "loss": 0.71,
+  "accuracy": 0.69,
+  "macro_precision": 0.68,
+  "macro_recall": 0.69,
+  "macro_f1": 0.68,
+  "weighted_f1": 0.68
+}

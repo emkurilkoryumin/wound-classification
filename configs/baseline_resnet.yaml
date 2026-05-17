@@ -6,6 +6,10 @@ output_dir: outputs
 
 data:
   root_dir: data/raw
+  class_names:
+    - грануляция
+    - воспаление
+    - некроз
   image_size: 224
   train_split: 0.70
   val_split: 0.15
@@ -13,7 +17,7 @@ data:
 
 training:
   batch_size: 16
-  epochs: 10
+  epochs: 8
   learning_rate: 0.0003
   weight_decay: 0.0001
 

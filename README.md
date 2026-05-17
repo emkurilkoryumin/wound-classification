@@ -1,10 +1,10 @@
 # wound-classification
 
-Baseline repository for a research prototype that classifies wound states from clinical images and supports Grad-CAM-based interpretation.
+Репозиторий с baseline-прототипом для исследования задачи классификации состояния ран по медицинским изображениям с поддержкой интерпретации решений через Grad-CAM.
 
-This repository was assembled from the current NIR materials and is intended to provide a public code reference for the project mentioned in the reports. The dataset itself is not committed to GitHub.
+Репозиторий собран на основе текущих материалов НИР и предназначен как публичная кодовая ссылка для проекта, указанного в отчётах. Сам набор данных в GitHub не загружается.
 
-## Repository layout
+## Структура репозитория
 
 ```text
 wound-classification/
@@ -16,40 +16,40 @@ wound-classification/
 └── src/
 ```
 
-## Implemented baseline
+## Что реализовано
 
-- Folder-based image dataset loading with stratified train/validation/test split.
-- ResNet18 baseline for multi-class image classification.
-- Training loop with checkpointing, CSV history, and learning-curve plots.
-- Evaluation script with accuracy and F1 metrics.
-- Grad-CAM script for visual interpretation of predictions.
+- загрузка изображений из структуры каталогов с разбиением на train/validation/test;
+- baseline-модель ResNet18 для многоклассовой классификации изображений;
+- цикл обучения с сохранением checkpoint, CSV-истории и графиков обучения;
+- скрипт оценки с расчётом accuracy и F1-метрик;
+- скрипт Grad-CAM для визуальной интерпретации предсказаний.
 
-## Quick start
+## Быстрый запуск
 
-1. Create and activate a virtual environment.
-2. Install dependencies:
+1. Создайте и активируйте виртуальное окружение.
+2. Установите зависимости:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Prepare the dataset in the following layout:
+3. Подготовьте датасет в следующем формате:
 
 ```text
 data/raw/
-├── class_1/
-├── class_2/
-└── class_3/
+├── грануляция/
+├── воспаление/
+└── некроз/
 ```
 
-4. Adjust `configs/baseline_resnet.yaml` if needed.
-5. Train the baseline model:
+4. При необходимости измените параметры в `configs/baseline_resnet.yaml`.
+5. Запустите обучение baseline-модели:
 
 ```bash
 python -m src.train --config configs/baseline_resnet.yaml
 ```
 
-6. Evaluate the saved checkpoint:
+6. Оцените сохранённый checkpoint:
 
 ```bash
 python -m src.evaluate \
@@ -57,7 +57,7 @@ python -m src.evaluate \
   --checkpoint outputs/checkpoints/baseline_resnet18.pt
 ```
 
-7. Build a Grad-CAM overlay for a single image:
+7. Постройте Grad-CAM-визуализацию для одного изображения:
 
 ```bash
 python -m src.interpret \
@@ -66,8 +66,8 @@ python -m src.interpret \
   --image path/to/example.jpg
 ```
 
-## Notes
+## Примечания
 
-- `docs/reports/` contains the current PDF materials for the NIR stages.
-- `outputs/` is kept in the repository as a target location for metrics, figures, and checkpoints.
-- If the final report uses a GitHub URL, update it to the public URL of this repository.
+- В `docs/reports/` лежат текущие PDF-материалы по этапам НИР.
+- Каталог `outputs/` содержит зафиксированные артефакты 5 этапа: таблицы, графики, сводные метрики и материалы по интерпретации.
+- Если в итоговом отчёте указана ссылка на GitHub, она должна вести на публичный адрес этого репозитория.

@@ -1,0 +1,8 @@
+{
+  "baseline_model": "ResNet18",
+  "epochs": 8,
+  "best_val_macro_f1": 0.68,
+  "test_accuracy": 0.69,
+  "test_macro_f1": 0.68,
+  "notes": "Артефакты 5 этапа зафиксированы по материалам отчёта."
+}

@@ -1,9 +1,9 @@
-# Reports
+# Отчёты
 
-This directory stores the current PDF materials for the NIR stages:
+В этом каталоге хранятся текущие PDF-материалы по этапам НИР:
 
-- literature review;
-- methodological section;
-- intermediate results.
+- литературный обзор;
+- методологический раздел;
+- промежуточные результаты.
 
-These files are included as supporting documentation for the public repository reference mentioned in the reports.
+Эти файлы добавлены как сопроводительные материалы к публичному репозиторию, на который ссылаются отчёты.
